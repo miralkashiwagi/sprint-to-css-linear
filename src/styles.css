@@ -477,7 +477,7 @@ svg { display: block; }
 }
 
 @keyframes previewMove {
-  from { left: 20x; }
+  from { left: 20px; }
   to { left: calc(100% - 70px); }
 }
 

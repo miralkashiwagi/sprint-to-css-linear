@@ -22,32 +22,32 @@ type Preset = {
 
 const presets: Preset[] = [
   {
-    label: 'やさしい',
+    label: 'Gentle',
     icon: 'leaf',
     tone: 'mint',
-    values: { mass: 1, stiffness: 120, damping: 18, duration: 900, samples: 54, clamp: true },
+    values: { mass: 1, stiffness: 100, damping: 15, duration: 800, samples: 10, clamp: false },
   },
   {
-    label: '軽快',
+    label: 'Quick',
     icon: 'bolt',
     tone: 'blue',
-    values: { mass: 1, stiffness: 220, damping: 24, duration: 560, samples: 44, clamp: true },
+    values: { mass: 1, stiffness: 300, damping: 20, duration: 600, samples: 20, clamp: false },
   },
   {
-    label: 'しっかり',
-    icon: 'shield',
-    tone: 'violet',
-    values: { mass: 1, stiffness: 170, damping: 32, duration: 760, samples: 52, clamp: true },
-  },
-  {
-    label: 'バウンシー',
+    label: 'Bouncy',
     icon: 'spring',
     tone: 'pink',
-    values: { mass: 1, stiffness: 170, damping: 20, duration: 1000, samples: 60, clamp: false },
+    values: { mass: 1, stiffness: 600, damping: 15, duration: 800, samples: 40, clamp: false },
+  },
+  {
+    label: 'Slow',
+    icon: 'shield',
+    tone: 'violet',
+    values: { mass: 1, stiffness: 80, damping: 20, duration: 600, samples: 10, clamp: false },
   },
 ];
 
-const initialParams = presets[3].values;
+const initialParams = presets[2].values;
 
 const controls: Array<{
   key: ParamKey;
@@ -247,7 +247,6 @@ function App() {
           <div class="tip-icon"><Icon name="sparkle" /></div>
           <div>
             <strong>数値を動かすとすぐに結果が変わります</strong>
-            <span>いろいろ試して、理想の動きを見つけてみてください！</span>
           </div>
         </aside>
       </header>
