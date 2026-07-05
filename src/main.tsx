@@ -61,6 +61,17 @@ const controls: Array<{
   tone: string;
 }> = [
   {
+    key: 'duration',
+    label: '時間 (ms)',
+    hint: 'アニメーションの長さ',
+    min: 100,
+    max: 5000,
+    step: 10,
+    range: '100 – 5000',
+    icon: 'clock',
+    tone: 'orange',
+  },
+  {
     key: 'stiffness',
     label: 'ばねの強さ (Stiffness)',
     hint: 'ばねの強さ。大きいほど速く戻ります',
@@ -92,17 +103,6 @@ const controls: Array<{
     range: '0.1 – 10',
     icon: 'mass',
     tone: 'mint',
-  },
-  {
-    key: 'duration',
-    label: '時間 (ms)',
-    hint: 'アニメーションの長さ',
-    min: 100,
-    max: 5000,
-    step: 10,
-    range: '100 – 5000',
-    icon: 'clock',
-    tone: 'orange',
   },
   {
     key: 'samples',
